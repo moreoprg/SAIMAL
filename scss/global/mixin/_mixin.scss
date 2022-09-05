@@ -1,0 +1,148 @@
+@use "../setting" as *;
+
+// フォント
+@mixin font-family1 {
+  font-family: $font-family1;
+}
+@mixin font-family2 {
+  font-family: $font-family2;
+}
+
+// フォントサイズ
+@mixin font-size($size, $base: 16) {
+  font-size: $size + px;
+  font-size: ($size / $base) + rem;
+}
+
+//pxをvwに変換するfunction
+@function _get_vw($size, $viewport: 375) {
+  $rate: calc(100 / $viewport);
+  @return $rate * $size * 1vw;
+}
+
+//フォント用のmixin
+@mixin font-vw($font_size: 12, $viewsize: 375) {
+  font-size: $font_size * 1px;
+  font-size: _get_vw($font_size, $viewsize);
+}
+
+//画像用のmixin
+@mixin img-vw($img_size, $viewsize: 375) {
+  width: $img_size * 1px;
+  width: _get_vw($img_size, $viewsize);
+}
+
+// 画像
+@mixin img {
+  object-fit: cover;
+  background-repeat: no-repeat;
+  vertical-align: top;
+}
+
+
+// ポジション指定
+@mixin position($pos, $top, $left) {
+  position: $pos;
+  top: $top;
+  left: $left;
+}
+// @include position();
+
+@mixin positionR($pos, $top, $right) {
+  position: $pos;
+  top: $top;
+  right: $right;
+}
+@mixin positionB($pos, $bottom, $right) {
+  position: $pos;
+  top: $bottom;
+  right: $right;
+}
+
+@mixin position-center($top: 50%, $left: 50%) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: translate(-50%, -50%);
+}
+@mixin position-bottom($bottom, $left: 50%) {
+  position: absolute;
+  bottom: $bottom;
+  left: $left;
+  transform: translate(-50%, -50%);
+}
+
+@mixin position-line( $bottom, $left,$width,$height,$color) {
+  content: "";
+  position: absolute;
+  bottom: $bottom;
+  left: $left;
+  width: $width;
+  height: $height;
+    background: $color;
+}
+
+@mixin pos-element($pos, $top, $left) {
+  content: "";
+  position: $pos;
+  top: $top;
+  left: $left;
+}
+@mixin pos-elementB($pos, $bottom, $left) {
+  content: "";
+  position: $pos;
+  top: $bottom;
+  left: $left;
+}
+
+
+// justify
+@mixin flex1($justify: center) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+}
+@mixin flex2($justify: center) {
+  display: flex;
+  justify-content: $justify;
+}
+
+@mixin txt{
+  text-align: justify; /* 両端揃え */
+  text-justify: inter-ideograph; /* 両端揃えの種類 */
+}
+
+
+// 矢印
+@mixin arrow-left($top, $left, $width, $height, $thin, $color) {
+  position: absolute;
+  content: "";
+  top: $top;
+  left: $left;
+  width: $width;
+  height: $height;
+  transform: rotate(-135deg);
+  border-top: $thin solid $color;
+  border-right: $thin solid $color;
+}
+@mixin arrow-right($top, $right, $width, $height, $thin, $color) {
+  position: absolute;
+  content: "";
+  top: $top;
+  right: $right;
+  width: $width;
+  height: $height;
+  transform: rotate(45deg);
+  border-top: $thin solid $color;
+  border-right: $thin solid $color;
+}
+
+
+
+// ローディングアニメーション
+@mixin position-load($top, $left,$cha,$sec) {
+  position: absolute;
+  bottom: $top;
+  left: $left;
+  animation: $cha $sec infinite;
+}

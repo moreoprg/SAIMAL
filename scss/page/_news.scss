@@ -1,0 +1,66 @@
+@use "../global" as *;
+
+/*news.scss*/
+.news-content{
+  width: 80%;
+  margin: 0 auto;
+  @include mq(tab) {
+   width: 90%;
+    }
+  &-head{
+    &-select{
+      display: flex;
+      margin-top: 1%;
+    }
+    &-categories{
+      display: flex;
+      li{
+        margin-right: 50px;
+        @include mq(tab) {
+        margin-right: 30px;
+        }
+        @include mq(sp) {
+        margin-right:15px;
+        }
+       &:hover{
+        opacity: 0.6;
+       }
+      }
+    }
+    &-year{
+      display: flex;
+      &-l{
+        margin-right: 20px;
+        @include mq(tab) {
+          margin-right: 5px;
+          }
+      }
+      select{
+        padding-left: 5%;
+        width: 100px;
+        @include font-size(18);
+
+        @include mq(tab) {
+          @include font-size(16);
+        }
+        @include mq(sp) {
+          @include font-size(14);
+          width: 70px;
+        }
+      
+        option{
+          border: 1px solid $Black;
+          padding-left: 5%;
+        }
+      }
+    }
+  }
+  &-item{
+    width: 90%;
+    margin: 5% auto 10%;
+    
+    @include mq(sp) {
+    width: 100%;
+    }
+  }
+}

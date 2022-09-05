@@ -1,0 +1,234 @@
+@use "../global" as *;
+
+// animate.scss
+/* その場でフワッと */
+.fadeIn {
+  animation-name: fadeInAnime;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* 下から */
+
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* fadeLeft */
+.fadeLeft {
+  animation: fadeLeftAnime 1.2s forwards; /* fadeLeftAnimeを1秒で一回実行 */
+}
+
+/* fadeRight */
+.fadeRight {
+  animation: fadeRightAnime 1.2s forwards; /* fadeRightAnimeを1秒で一回実行 */
+}
+
+.fadeLeftTrigger,
+.fadeRightTrigger {
+  opacity: 0; /* 初めは見えないようにしておく */
+}
+
+@keyframes fadeLeftAnime {
+  from {
+    opacity: 0; /* 初めは見えないようにしておく */
+    transform: translateX(100px); /* 100px右に動かしておく */
+  }
+
+  to {
+    opacity: 1; /* 可視化する */
+    transform: translateX(0); /* 元の位置に戻す */
+  }
+}
+
+@keyframes fadeRightAnime {
+  from {
+    opacity: 0; /* 初めは見えないようにしておく */
+    transform: translateX(-100px); /* 100px左に動かしておく */
+  }
+
+  to {
+    opacity: 1; /* 可視化する */
+    transform: translateX(0); /* 元の位置に戻す */
+  }
+}
+
+/* ローディングアニメーション*/
+#loading-wrapper {
+  @include position(fixed, 0, 0);
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: $Black;
+}
+
+#loading-text {
+  display: block;
+  @include position-center;
+  color: $white;
+  text-align: center;
+  font-family: $font-family2;
+  @include font-vw(100, 1024);
+  letter-spacing: 0.1em;
+}
+#loading-container {
+  width: 30%;
+  height: 100px;
+  margin: auto;
+  display: block;
+  color: $white;
+  @include position(absolute, 60%, 50%);
+  @include font-vw(40, 1024);
+  .L {
+    @include position-load(50%, 5%, L, 2s);
+  }
+  .O {
+    @include position-load(50%, 18%, O, 2s);
+    animation-delay: 100ms;
+  }
+  .A {
+    @include position-load(50%, 35%, A, 2s);
+    animation-delay: 200ms;
+  }
+  .D {
+    @include position-load(50%, 50%, D, 2s);
+    animation-delay: 300ms;
+  }
+  .I {
+    @include position-load(50%, 65%, I, 2s);
+    animation-delay: 400ms;
+  }
+  .N {
+    @include position-load(50%, 75%, N, 2s);
+    animation-delay: 500ms;
+  }
+  .G {
+    @include position-load(50%, 90%, G, 2s);
+    animation-delay: 600ms;
+  }
+}
+
+@keyframes L {
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+  50% {
+    top: 50px;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    opacity: 0;
+  }
+}
+@keyframes O {
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+  50% {
+    top: 50px;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    opacity: 0;
+  }
+}
+@keyframes A {
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+  50% {
+    top: 50px;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    opacity: 0;
+  }
+}
+@keyframes D {
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+  50% {
+    top: 50px;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    opacity: 0;
+  }
+}
+@keyframes I {
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+  50% {
+    top: 50px;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    opacity: 0;
+  }
+}
+@keyframes N {
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+  50% {
+    top: 50px;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    opacity: 0;
+  }
+}
+@keyframes G {
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+  50% {
+    top: 50px;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    opacity: 0;
+  }
+}

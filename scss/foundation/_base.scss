@@ -1,0 +1,518 @@
+@use "../global" as *;
+
+// base.scss
+
+body {
+  line-height: 1.6;
+  letter-spacing: 1px;
+  word-break: break-all;
+  color: $Black;
+  font-family: $font-family1;
+  @include font-size(18);
+
+  @include mq(tab) {
+    @include font-size(16);
+    .tab-br {
+      display: none;
+    }
+  }
+  @include mq(sp) {
+    @include font-size(14);
+  }
+}
+
+// @media screen and (max-width: 768px) {
+//   body {
+//     @include font-size(16);
+//   }
+// }
+// @media screen and (max-width: 480px) {
+//   body {
+//     @include font-size(14);
+//   }
+// }
+
+a {
+  text-decoration: none;
+  color: $Black;
+}
+
+li {
+  list-style: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  padding: unset;
+}
+// 画面幅
+.wrapper {
+  margin: 0 auto;
+  padding: 0 5%;
+}
+.max-wrapper {
+  max-width: 1200px;
+}
+// フォント
+.font-outfit {
+  font-family: $font-family2;
+}
+
+.fontz1 {
+  @include font-vw(48, 768);
+}
+.fontz2 {
+  @include font-size(40);
+  font-weight: bold;
+  @include mq(pc) {
+    @include font-vw(33, 768);
+  }
+}
+.fontz3 {
+  @include font-size(24);
+  @include mq(pc) {
+    @include font-size(20);
+  }
+  @include mq(sp) {
+    @include font-size(18);
+  }
+}
+
+// section
+.sec-ttl {
+  @include font-size(48);
+  padding-top: 60px;
+  margin-bottom: 60px;
+  font-family: $font-family2;
+  @include mq(tab) {
+    @include font-size(32);
+    margin-bottom: 30px;
+  }
+  @include mq(sp) {
+    @include font-size(24);
+    padding-top: 40px;
+  }
+}
+
+.ttl-center {
+  text-align: center;
+}
+
+// bg
+.bg {
+  background: $bgc-wgray;
+}
+
+// border
+.border2 {
+  position: relative;
+  display: inline-block;
+  &::after {
+    @include position-line(0, 50%, 50%, 2px, $Black);
+    transform: translateX(-50%);
+  }
+  &:hover {
+    opacity: 0.6;
+  }
+}
+// base.scss
+/*home-top*/
+.home {
+  padding-top: 80px;
+  width: 100%;
+  height: auto;
+  @include mq(sp) {
+    padding-top: 60px;
+  }
+  &-top {
+    position: relative;
+    top: 0;
+  }
+  &-ttl {
+    @include position-center;
+    text-align: center;
+    color: $white;
+    z-index: 5;
+    width: 90%;
+  }
+  .slider {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* 画像がはみ出ないようにする */
+    &-img {
+      width: 100%;
+      height: auto;
+      img {
+        @include img;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+@keyframes fadezoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1); /* 拡大率 */
+  }
+}
+.slider-animation {
+  animation: fadezoom 8s 0s forwards;
+}
+
+/*about*/
+.about {
+  margin-top: 20px;
+  padding-bottom: 60px;
+  @include mq(tab) {
+    margin-top: unset;
+  }
+  @include mq(sp) {
+    padding-bottom: 30px;
+  }
+  &-contents {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    @include mq(tab) {
+      display: block;
+    }
+    &-l {
+      width: 50%;
+
+      @include mq(tab) {
+        width: 100%;
+        text-align: center;
+      }
+      &-ttl {
+        .fontz3 {
+          margin-bottom: 40px;
+        }
+      }
+      .Mbtn {
+        margin-left: 0;
+        margin-top: 40px;
+        @include mq(tab) {
+          display: none;
+        }
+      }
+    }
+
+    &-r {
+      width: 50%;
+      @include mq(tab) {
+        width: 100%;
+      }
+      &-txt {
+        @include txt;
+        line-height: 2;
+        @include mq(pc) {
+          padding-top: 1%;
+        }
+      }
+    }
+    .v-btn {
+      margin-top: 40px;
+    }
+  }
+}
+
+/*works*/
+.works {
+  padding-bottom: 60px;
+  @include mq(sp) {
+    padding-bottom: 30px;
+  }
+  &-txt {
+    width: 86%;
+    max-width: 86%;
+    margin: 0 auto;
+    padding-bottom: 60px;
+    @include mq(tab) {
+      width: 90%;
+      max-width: 100%;
+    }
+    @include mq(sp) {
+      padding-bottom: 30px;
+    }
+  }
+  &-inner {
+    &-item {
+      &-img {
+        img {
+          @include img;
+          width: 100%;
+          height: auto;
+        }
+      }
+      &-txt {
+        padding-top: 15px;
+      }
+    }
+  }
+  &-slider {
+    width: 100%;
+    max-width: 88%;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    @include mq(sp) {
+      margin-bottom: 30px;
+    }
+    &-item {
+      height: 100%;
+      padding-left: 5%;
+      padding-right: 5%;
+      position: relative;
+    }
+  }
+  .Mbtn {
+    margin: 0 auto;
+  }
+}
+// 制作実績カーソル乗せたら大きく
+.works-img:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out 0s;
+  opacity: 0.8;
+}
+
+.slick-prev {
+  left: -20px;
+  top: 40%;
+  @include mq(sp) {
+    left: -10px;
+  }
+  &::before {
+    @include arrow-left(0, 0, 0.6rem, 0.6rem, 2px, $Black);
+    margin: auto;
+  }
+}
+.slick-next {
+  right: -20px;
+  top: 40%;
+  @include mq(sp) {
+    right: -10px;
+  }
+  &::before {
+    @include arrow-right(0, 0, 0.6rem, 0.6rem, 2px, $Black);
+    margin: auto;
+  }
+}
+
+/*service*/
+.service {
+  padding-bottom: 60px;
+  @include mq(sp) {
+    padding-bottom: 30px;
+  }
+  &-inner {
+    margin-bottom: 60px;
+    @include flex1(space-between);
+    @include mq(tab) {
+      display: block;
+    }
+    @include mq(sp) {
+      margin-bottom: 40px;
+    }
+    &-item {
+      width: 30%;
+      @include mq(tab) {
+        width: 80%;
+        margin: 0 auto;
+      }
+      @include mq(sp) {
+        width: 100%;
+      }
+      &-img {
+        width: 100%;
+        img {
+          @include img;
+        }
+      }
+      &-txt {
+        .fontz3 {
+          text-align: center;
+          padding-top: 20px;
+          padding-bottom: 15px;
+        }
+      }
+    }
+    &-item + &-item {
+      @include mq(tab) {
+        margin-top: 60px;
+      }
+      @include mq(sp) {
+        margin-top: 40px;
+      }
+    }
+  }
+  .Mbtn {
+    margin: 0 auto;
+  }
+}
+
+/*news*/
+.news {
+  @include mq(tab) {
+    padding-bottom: 60px;
+  }
+  @include mq(sp) {
+    padding-bottom: 30px;
+  }
+  &-inner {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    @include flex2(space-between);
+    @include mq(tab) {
+      display: block;
+      padding-top: 40px;
+    }
+    .sec-ttl {
+      padding-top: unset;
+      @include mq(tab) {
+        margin-bottom: 40px;
+      }
+      @include mq(sp) {
+        margin-bottom: 30px;
+      }
+    }
+    &-l {
+      width: 250px;
+      .Mbtn {
+        @include mq(tab) {
+          display: none;
+        }
+      }
+      @include mq(tab) {
+        width: 100%;
+      }
+    }
+    &-r {
+      width: calc(100% - 250px);
+      padding-left: 10%;
+      @include mq(pc) {
+        padding-left: 5%;
+      }
+      @include mq(tab) {
+        width: 90%;
+        padding-left: unset;
+        margin: 0 auto;
+      }
+      @include mq(sp) {
+        width: 100%;
+      }
+    }
+  }
+}
+// ニュース共通
+.news-item {
+  transition: 0.5s;
+  &:hover {
+    opacity: 0.6;
+  }
+  a {
+    @include flex1(space-between);
+    position: relative;
+    padding: 3% 0;
+    @include mq(sp) {
+      display: block;
+      padding-bottom: 5%;
+    }
+    &::before {
+      @include position-line(5px, 0, 100%, 1px, $Black);
+    }
+  }
+  &-head {
+    width: 120px;
+    @include mq(sp) {
+      width: 100%;
+      margin-bottom: 2%;
+    }
+  }
+  &-body {
+    width: calc(100% - 140px);
+    @include mq(sp) {
+      width: 100%;
+      margin-bottom: 2%;
+    }
+  }
+}
+
+/*RC*/
+.RC {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @include mq(tab) {
+    padding-top: 60px;
+  }
+  @include mq(sp) {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+  &-inner {
+    @include flex2;
+    width: 90%;
+    margin: 0 auto;
+    @include mq(tab) {
+      display: block;
+    }
+    &-item {
+      position: relative;
+      width: 50%;
+      @include mq(tab) {
+        width: 100%;
+      }
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  &-img {
+    width: 100%;
+    img {
+      @include img;
+    }
+  }
+  &-txt {
+    @include position-center;
+    color: $white;
+    @include font-vw(40, 1024);
+    font-weight: bold;
+    @include mq(tab) {
+      @include font-vw(48, 768);
+    }
+    @include mq(sp) {
+      @include font-vw(32, 480);
+    }
+    font-family: $font-family2;
+    display: block;
+    text-align: center;
+
+    span {
+      position: relative;
+      &::after {
+        @include position-line(0, 0, 0, 3px, $white);
+        display: block;
+        background: $white;
+        transition: 0.5s;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+}

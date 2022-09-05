@@ -1,0 +1,117 @@
+@use "../global" as *;
+
+/*footer*/
+.footer {
+  background: $cBlack;
+  color: $white;
+  padding-bottom: 30px;
+  &-inner {
+    padding-top: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    @include mq(tab) {
+      padding-top: 40px;
+    }
+    @include mq(sp) {
+      padding-top: 30px;
+    }
+    &-logo{
+      position: relative;
+      &::after {
+        @include position-line(-15px, 0, 100%,1px, $white);
+      }
+      a{
+        color: $white;
+        &:hover{
+          opacity: 0.6;
+        }
+      }
+    
+    }
+    &-item {
+      @include flex2(space-between);
+      width: 95%;
+      margin: 0 auto;
+      margin-top: 55px;
+      @include mq(tab-sp) {
+        width: 100%;
+        margin-top: 35px;
+        display: block;
+      }
+      &-l {
+        @include font-size(18);
+        @include mq(tab) {
+          @include font-size(14);
+        }
+        @include mq(tab-sp) {
+          @include font-size(12);
+          display: flex;
+        }
+        .footer-access {
+          padding-bottom: 8%;
+          @include mq(tab-sp) {
+            margin-right: 8%;
+            padding-bottom: 5%;
+          }
+        }
+      }
+    }
+    .footer-nav {
+      display: flex;
+      &-l {
+        display: flex;
+      }
+      &-r {
+        display: flex;
+        @include mq(pc) {
+          display: block;
+        }
+      }
+      &-item {
+        width: 8rem;
+        margin-bottom: 2rem;
+        @include mq(pc) {
+          width: 6rem;
+        }
+        @include mq(tab) {
+          width: 4.8rem;
+        }
+        @include mq(tab) {
+          margin-bottom: 1rem;
+        }
+        &.footer-privacy {
+          width: 12rem;
+          @include mq(tab) {
+            width: 9rem;
+          }
+        }
+  a {
+    color: $white;
+    @include mq(pc) {
+      @include font-size(16);
+    }
+    @include mq(tab) {
+      @include font-size(12);
+    }
+  }
+  &:hover{
+    opacity: 0.6;
+  }
+      }
+    }
+  }
+
+  .copyright {
+    @include font-size(16);
+    text-align: center;
+    padding-top: 80px;
+    @include mq(tab) {
+      @include font-size(14);
+      padding-top: 60px;
+    }
+    @include mq(sp) {
+      @include font-size(10);
+      padding-top: 40px;
+    }
+  }
+}

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SAIMAL</title>
+    <meta name="description" content="Webサイトを通じて世の中を笑顔に。" />
+    <meta name="keywords" content="SAIMAL、webサイト、ホームページ制作" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="SAIMAL" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://moreoweb.site" />
+    <meta property="og:image" content="../img/logo.png" />
+    <meta
+      property="og:description"
+      content="Webサイトを通じて世の中を笑顔に。"
+    />
+    <meta property="og:site_name" content="SAIMAL" />
+    <!--  favicon -->
+    <link rel="icon" href="img/favicon.png" />
+    <!-- <link rel="icon" href="<?php echo get_template_directory_uri();?>;/img/favicon.png"> -->
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- cssファイル -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+
+    <!-- slick -->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <!-- php -->
+    <!-- <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/css/index.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/style.css"> -->
+
+    <!-- jq読み込ませ -->
+    <script
+      src="https://kit.fontawesome.com/5ef3a52884.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- ローディングアニメーション -->
+    <div id="loading-wrapper">
+      <div id="loading-text">SAIMAL</div>
+      <div id="loading-container">
+        <div class="L">
+          <p>L</p>
+        </div>
+        <div class="O">
+          <p>O</p>
+        </div>
+        <div class="A">
+          <p>A</p>
+        </div>
+        <div class="D">
+          <p>D</p>
+        </div>
+        <div class="I">
+          <p>I</p>
+        </div>
+        <div class="N">
+          <p>N</p>
+        </div>
+        <div class="G">
+          <p>G</p>
+        </div>
+      </div>
+    </div>
+    <div class="page">
+      <header id="header" class="header page-header wrapper">
+        <h1 class="header-logo"><a href="../index.html">SAIMAL</a></h1>
+        <nav class="header-nav">
+          <ul class="header-nav-list font-outfit">
+            <li class="header-nav-list-item">
+              <a href="./about.html">ABOUT</a>
+            </li>
+            <li class="header-nav-list-item">
+              <a href="./works.html">WORKS</a>
+            </li>
+            <li class="header-nav-list-item">
+              <a href="./service.html">SERVICE</a>
+            </li>
+            <li class="header-nav-list-item">
+              <a href="./news.html">NEWS</a>
+            </li>
+            <li class="header-nav-list-item">
+              <a href="#" class="border">RECRUIT</a>
+            </li>
+            <li class="header-nav-list-item">
+              <a href="./contact.html">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- ハンバーガーメニュー -->
+        <div class="drawer"></div>
+      </header>
+      <div class="page-home">
+        <div class="page-home-big">
+          RECRUIT
+          <p class="page-home-j">採用情報</p>
+        </div>
+        <p class="page-home-txt">
+          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。
+        </p>
+      </div>
+    </div>
+    <main>
+      <section class="recruit">
+        <div class="recruit-categories">
+          <ul class="recruit-categories-list">
+            <li class="recruit-categories-list-item border2">
+              <a href="#">新卒採用</a>
+            </li>
+            <li class="recruit-categories-list-item">
+              <a href="#">中途採用</a>
+              <li class="recruit-categories-list-item">
+                <a href="#">インターン採用</a>
+              </li>
+            </li>
+          </ul>
+          <ul class="recruit-categories-list">
+            <li class="recruit-categories-list-item">
+              <a href="#">エンジニア採用</a>
+            </li>
+            <li class="recruit-categories-list-item">
+              <a href="#">デザイナー採用</a>
+            </li>
+          </ul>
+        </div>
+        <!-- 募集要項 -->
+        <div class="job">
+          <div class="job-inner">
+            <div class="job-inner-list acordion">
+              <div class="job-inner-list-item">
+                <p class="job-inner-list-item-ttl">ビジネス職</p>
+                <div class="job-inner-list-item-content">
+                  <table class="table-inner">
+                    <tbody>
+                      <tr>
+                        <th>雇用形態</th>
+                        <td>正社員</td>
+                      </tr>
+                      <tr>
+                        <th>応募要件</th>
+                        <td>23卒採用</td>
+                      </tr>
+                      <tr>
+                        <th>就業場所</th>
+                        <td>本社<span>（埼玉県大宮市xxxx-xxx）</span></td>
+                      </tr>
+                      <tr>
+                        <th>給与</th>
+                        <td>基本給：250,000円</td>
+                      </tr>
+                      <tr>
+                        <th>勤務時間</th>
+                        <td>9:00~18:00 <span>（在宅勤務導入）</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="e-btn">
+                    <a href="#" class="e-btn-link">応募する</a>
+                  </div>
+                </div>
+              </div>
+              <div class="job-inner-list-item">
+                <p class="job-inner-list-item-ttl">エンジニア職</p>
+                <div class="job-inner-list-item-content">
+                  <table class="table-inner">
+                    <tbody>
+                      <tr>
+                        <th>雇用形態</th>
+                        <td>正社員</td>
+                      </tr>
+                      <tr>
+                        <th>応募要件</th>
+                        <td>23卒採用</td>
+                      </tr>
+                      <tr>
+                        <th>就業場所</th>
+                        <td>本社<span>（埼玉県大宮市xxxx-xxx）</span></td>
+                      </tr>
+                      <tr>
+                        <th>給与</th>
+                        <td>基本給：250,000円</td>
+                      </tr>
+                      <tr>
+                        <th>勤務時間</th>
+                        <td>9:00~18:00 <span>（在宅勤務導入）</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="e-btn">
+                    <a href="#" class="e-btn-link">応募する</a>
+                  </div>
+                </div>
+              </div>
+              <div class="job-inner-list-item">
+                <p class="job-inner-list-item-ttl">デザイナー職</p>
+                <div class="job-inner-list-item-content">
+                  <table class="table-inner">
+                    <tbody>
+                      <tr>
+                        <th>雇用形態</th>
+                        <td>正社員</td>
+                      </tr>
+                      <tr>
+                        <th>応募要件</th>
+                        <td>23卒採用</td>
+                      </tr>
+                      <tr>
+                        <th>就業場所</th>
+                        <td>本社<span>（埼玉県大宮市xxxx-xxx）</span></td>
+                      </tr>
+                      <tr>
+                        <th>給与</th>
+                        <td>基本給：250,000円</td>
+                      </tr>
+                      <tr>
+                        <th>勤務時間</th>
+                        <td>9:00~18:00 <span>（在宅勤務導入）</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="e-btn">
+                    <a href="#" class="e-btn-link">応募する</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer class="footer wrapper">
+      <div class="footer-inner">
+        <h4 class="footer-inner-logo fontz3"><a href="index.html">SAIMAL</a></h4>
+        <div class="footer-inner-item">
+          <div class="footer-inner-item-l">
+            <div class="footer-access">
+              〒xxx-xxxx <br />
+              埼玉県大宮市xxxx-xxx
+            </div>
+            <div class="footer-info">
+              <p class="tel">TEL：xxx-xxxx-xxx</p>
+              <p class="fax">FAX：xxx-xxxx-xxx</p>
+            </div>
+          </div>
+          <div class="footer-nav">
+            <div class="footer-nav-l">
+              <div class="footer-nav-l-l">
+                <p class="footer-nav-item">
+                  <a href="./about.html">ABOUT</a>
+                </p>
+                <p class="footer-nav-item">
+                  <a href="./works.html">WORKS</a>
+                </p>
+                <p class="footer-nav-item">
+                  <a href="./service.html">SERVICE</a>
+                </p>
+              </div>
+              <div class="footer-nav-l-r">
+                <p class="footer-nav-item">
+                  <a href="./news.html">NEWS</a>
+                </p>
+                <p class="footer-nav-item">
+                  <a href="#">RECRUIT</a>
+                </p>
+                <p class="footer-nav-item">
+                  <a href="./contact.html">CONTACT</a>
+                </p>
+              </div>
+            </div>
+            <div class="footer-nav-r">
+              <div class="footer-nav-r-l">
+                <p class="footer-nav-item">
+                  <a href="#">料金案内</a>
+                </p>
+                <p class="footer-nav-item">
+                  <a href="#">対応エリア</a>
+                </p>
+              </div>
+              <div class="footer-nav-r-r">
+                <p class="footer-nav-item footer-privacy">
+                  <a href="#">プライバシーポリシー</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <small>Copyright © SAIMAL INC. All rights reserved.</small>
+      </div>
+    </footer>
+    <!-- JS -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+    ></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+  </body>
+</html>

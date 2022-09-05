@@ -1,0 +1,64 @@
+@use "../global" as *;
+
+/*page-htmlファイル共通*/
+
+.page{
+  background: $page-gray;
+  padding-bottom: 60px;
+  width: 100%;
+  @include mq(sp) {
+    padding-bottom: 30px;
+  }
+  &-home{
+    padding-top: 80px;
+    width: 80%;
+    margin: 0 auto;
+    @include mq(tab) {
+width: 90%;
+    }
+    &-big{
+      color: $white;
+      @include font-vw(160, 1024);
+      font-family: $font-family2;
+      font-weight: 600;
+      line-height: 1;
+      position: relative;
+      display: inline-block;
+ 
+    }
+    &-j{
+      color: $Black;
+      @include font-vw(48, 1024);
+    @include position-bottom(0);
+    font-weight: bold;
+    font-family: $font-family1;
+    }
+  &-txt{
+    padding-top: 5%;
+  }
+
+  }
+
+}
+
+.page-sec-ttl {
+  @include font-size(48);
+  padding-top: 60px;
+ 
+  font-family: $font-family1;
+  @include mq(tab) {
+    @include font-size(32);
+padding-top: 40px;
+  }
+  @include mq(sp) {
+    @include font-size(24);
+  padding-top: 40px;
+  }
+}
+
+
+.bg-gray{
+  background: $page-gray;
+}
+
+

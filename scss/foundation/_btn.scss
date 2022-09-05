@@ -1,0 +1,132 @@
+@use "../global" as *;
+
+.Mbtn,.v-btn,.e-btn{
+  width: 250px;
+  display: block;
+  margin: 0 auto;
+  @include mq(sp) {
+    width: 150px;
+  }
+    &-link {
+      border: 1px solid $Black;
+      @include font-size(24);
+      margin: 0 auto;
+      cursor: pointer;
+      outline: none;
+      height: 70px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      font-weight: 600;
+      font-family: $font-family2;
+      transition: 0.8s;
+      @include mq(sp) {
+        height: 42px;
+        @include font-size(16);
+      }
+      &:hover {
+        color: $white;
+        background: $Black;
+      }
+    }
+  }
+
+
+
+.v-btn {
+  display: none;
+  @include mq(tab) {
+    width: 250px;
+    display: block;
+  }
+  @include mq(sp) {
+    width: 150px;
+  }
+
+}
+
+.e-btn {
+  @include mq(tab) {
+    width: 200px;
+  }
+  @include mq(sp) {
+    width: 150px;
+  }
+  &-link {
+    font-family: $font-family1;
+    background: $white;
+    @include font-size(20);
+    @include mq(tab) {
+      height: 56px;
+    }
+    @include mq(sp) {
+      @include font-size(16);
+      height: 42px;
+    }
+  }
+}
+
+
+// pager-btn
+.pager {
+  padding-top: 5%;
+  margin-bottom: 80px;
+  @include mq(sp) {
+    margin-bottom: 60px;
+  }
+  .pagenav {
+    @include flex1;
+    &-num {
+      background: $Black;
+      color: $white;
+      width: 60px;
+      height: 60px;
+      @include flex1;
+      transition: 0.5s;
+      &.current {
+        background: $page-gray;
+        color: $Black;
+      }
+   &.n-current{
+    &:hover{
+      background: $page-gray;
+      color: $Black;
+    }
+   }
+    }
+  }
+  &-inner {
+    @include flex1(center);
+    &-item {
+      a {
+        width: 90px;
+        @include flex1(center);
+        height: 60px;
+        background: $cBlack;
+        color: $white;
+        transition: .5s;
+        @include mq(sp) {
+          width: 80px;
+          height: 50px;
+        
+        }
+        &:hover{
+          background: $white;
+          color: $cBlack;
+        }
+      }
+      &.pager-home {
+        a {
+          padding: 0 5%;
+        
+        }
+      }
+    }
+  }
+}
+
+
+

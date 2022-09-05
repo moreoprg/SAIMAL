@@ -1,0 +1,25 @@
+@use "../global" as *;
+
+/*works.scss*/
+.works-contents {
+  padding-top: 60px;
+
+  @include mq(sp) {
+    padding-top: 40px;
+  }
+  .works-grid {
+    margin-bottom: 60px;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
+    @include mq(pc) {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    @include mq(tab) {
+      margin-bottom: 40px;
+    }
+    &-item {
+      margin-bottom: 5%;
+    }
+  }
+}

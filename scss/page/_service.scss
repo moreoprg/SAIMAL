@@ -1,0 +1,112 @@
+@use "../global" as *;
+
+/*service.scss*/
+.service-wrapper{
+  padding-bottom: 50px;
+  @include mq(sp) {
+    padding-bottom: 30px;
+  }
+}
+
+.service-container{
+  padding: 0 10%;
+  padding-bottom: 30px;
+  @include mq(pc) {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  &-desc{
+    margin-top: 20px;
+  }
+  &-list{
+    @include flex2(space-between);
+    flex-wrap: wrap;
+    margin-top: 60px;
+    @include mq(tab) {
+      display: block;
+    }
+    @include mq(sp) {
+     margin-top: 30px;
+    }
+    &-item{
+      width: 48%;
+      margin-bottom: 60px;
+      @include mq(tab) {
+       width: 100%;
+      }
+      @include mq(sp) {
+       margin-bottom: 30px;
+      }
+   &-head{
+    display: flex;
+    align-items: center;
+
+   }
+   &-ico{
+    width: 40px;
+    height: 40px;
+    margin-right: 1.25rem;
+    @include mq(sp) {
+     width: 30px;
+     height: 30px;
+    }
+    img{
+      @include img;
+    }
+  }
+  &-lead{
+    @include font-size(28);
+    font-weight: bold;
+    @include mq(pc) {
+      @include font-size(24);
+    }
+    @include mq(sp) {
+      @include font-size(18);
+    }
+  }
+  &-txt{
+    margin-top: 1rem;
+  }
+    }
+  }
+}
+
+.service-pic{
+  padding-right: 10%;
+  height: 500px;
+  text-align: left;
+  @include mq(pc) {
+    padding-right: 5%;
+  }
+  @include mq(tab) {
+    height: 327px;
+  }
+  @include mq(sp) {
+    height: 190px;
+  }
+    img{
+      @include img;
+ height: 100%;
+    
+  }
+ &.website-img{
+  img{
+    object-position: 0% 100%;
+  }
+ }
+ &.creative-img{
+padding-right: unset;
+padding-left: 10%;
+@include mq(pc) {
+  padding-left: 5%;
+}
+ }
+}
+
+.sec-service{
+  padding-bottom: 30px;
+  &:nth-child(even){
+    background: $bgc-wgray;
+  }
+}
+

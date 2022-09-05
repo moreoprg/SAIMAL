@@ -1,0 +1,127 @@
+@use "../global" as *;
+
+/*contact.scss*/
+.contact{
+  padding: 5% 10% 10%;
+  @include mq(tab) {
+    padding-left: 5%;
+    padding-right: 5%;
+     }
+  &-inner{
+  background: $white;
+width: 100%;
+padding: 5% 0;
+max-width: 1000px;
+margin: 0 auto;
+  }
+  &-form{
+    width: 70%;
+    margin: 0 auto;
+    @include mq(sp) {
+     width: 90%;
+       }
+    &-item{
+    margin-bottom: 40px;
+      &-box{
+        width: 100%;
+margin-top: 10px;
+      }
+      &-name{
+        margin-bottom: 20px;
+        small{
+          color: $red;
+        }
+      }
+    }
+    &-txt,&-textarea{
+      width: 100%;
+      margin-bottom: 5px;
+    border: 1px solid $Black;
+    appearance: none;
+    padding: 20px;
+    }
+    &-textarea{
+      padding-top: 10px;
+    }
+  }
+}
+.form-agreement{
+  border-top: 1px solid $Black;
+  border-bottom: 1px solid $Black;
+  width: 85%;
+  margin: 0 auto;
+  max-width: 800px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  margin-bottom: 60px;
+  @include mq(tab) {
+    width: 100%;
+  }
+  &-checkbox{
+    font-weight: bold;
+ 
+  }
+.checkbox{
+  position: relative;
+  cursor: pointer;
+  user-select: none; /* テキストの選択を防ぐ */
+  input{
+    display: none;
+    &:checked + .checkbox-mark{
+      background: $white; /* チェック時の色 */
+      border-color:  $Black; /* チェック時の色 */
+      &::after{
+        opacity: 1;
+        z-index: 100;
+      }
+    }
+   }
+&-mark{
+  @include position(absolute,0,-30px);
+  height: 18px; /* 大きさ */
+  width: 18px; /* 大きさ */
+  border: solid 2px $Black; /* 線 */
+  margin-top: 5px;
+  @include mq(tab) {
+    height: 15px; 
+  width: 15px; 
+  left: -20px;
+  }
+ 
+  &::after{
+@include pos-element(absolute,-2px,3.5px);
+width: 6px; /* チェックの大きさ */
+  height: 12px; /* チェックの大きさ */
+  border: solid $Black;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  opacity: 0; /* 透明にしておく */
+  transition: all 0.5s;
+  @include mq(tab) {
+   left: 2px;
+   top: -4px;
+   width: 5px;
+  }
+  }
+}
+
+}
+}
+
+  .privacy{
+    margin-top: 1%;
+    @include font-size(14);
+    @include mq(tab) {
+      @include font-size(12);
+    }
+    @include mq(sp) {
+      @include font-size(10);
+    }
+    a{
+      border-bottom: 1px solid $Black;
+      &:hover{
+        opacity: 0.6;
+      }
+    }
+  }

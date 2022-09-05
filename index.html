@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SAIMAL</title>
+    <meta name="description" content="Webサイトを通じて世の中を笑顔に。" />
+    <meta name="keywords" content="SAIMAL、webサイト、ホームページ制作" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="SAIMAL" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://moreoweb.site" />
+    <meta property="og:image" content="img/logo.png" />
+    <meta
+      property="og:description"
+      content="Webサイトを通じて世の中を笑顔に。"
+    />
+    <meta property="og:site_name" content="SAIMAL" />
+    <!--  favicon -->
+    <link rel="icon" href="img/favicon.png" />
+    <!-- <link rel="icon" href="<?php echo get_template_directory_uri();?>;/img/favicon.png"> -->
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- cssファイル -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+
+    <!-- slick -->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- php -->
+    <!-- <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/css/index.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/style.css"> -->
+
+    <!-- jq読み込ませ -->
+    <script
+      src="https://kit.fontawesome.com/5ef3a52884.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- ローディングアニメーション -->
+    <div id="loading-wrapper">
+      <div id="loading-text"> SAIMAL</div>
+    <div id="loading-container">
+      <div class="L">
+        <p>L</p>
+      </div>
+      <div class="O">
+        <p>O</p>
+      </div>
+      <div class="A">
+        <p>A</p>
+      </div>
+      <div class="D">
+        <p>D</p>
+      </div>
+      <div class="I">
+        <p>I</p>
+      </div>
+      <div class="N">
+        <p>N</p>
+      </div>
+      <div class="G">
+        <p>G</p>
+      </div>
+    </div>
+  </div>
+    <header id="header" class="header  wrapper">
+      <h1 class="header-logo"><a href="index.html">SAIMAL</a></h1>
+      <nav class="header-nav">
+        <ul class="header-nav-list font-outfit">
+          <li class="header-nav-list-item">
+            <a href="html/about.html" >ABOUT</a>
+          </li>
+          <li class="header-nav-list-item">
+            <a href="html/works.html">WORKS</a>
+          </li>
+          <li class="header-nav-list-item">
+            <a href="html/service.html">SERVICE</a>
+          </li>
+          <li class="header-nav-list-item">
+            <a href="html/news.html">NEWS</a>
+          </li>
+          <li class="header-nav-list-item">
+            <a href="html/recruit.html">RECRUIT</a>
+          </li>
+          <li class="header-nav-list-item">
+            <a href="html/contact.html">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- ハンバーガーメニュー -->
+      <div class="drawer"></div>
+    </header>
+    <!-- top -->
+    <div id="home" class="home">
+      <div class="home-top">
+        <div class="home-ttl">
+          <h2 class="home-ttl-txt fontz1 font-outfit">
+            Give For Smile with Website
+          </h2>
+        </div>
+        <ul class="slider">
+          <li class="slick-img">
+            <img src="img/top1.png" alt="webサイトトップ" />
+          </li>
+          <li class="slick-img">
+            <img src="img/top2.png" alt="webサイトトップ2" />
+          </li>
+          <li class="slick-img">
+            <img src="img/top3.png" alt="webサイトトップ3" />
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <main>
+      <!-- about -->
+      <section id="about" class="about wrapper max-wrapper  fadeInTrigger">
+        <h2 class="sec-ttl ttl-center ">ABOUT</h2>
+        <div class="about-contents">
+          <div class="about-contents-l">
+            <div class="about-contents-l-ttl">
+              <p class="fontz2">
+                Webサイトを通じて<br class="tab-br" />世の中を笑顔に。
+              </p>
+            </div>
+            <div class="Mbtn">
+              <a href="./html/about.html" class="Mbtn-link">View More</a>
+            </div>
+          </div>
+          <div class="about-contents-r  ">
+            <p class="about-contents-r-txt">
+              私たちはWeb制作会社として、Webサイトを通じて、お客様やWebサイトを訪問してきたユーザーを笑顔にしたい。<br />
+              webサイトがお客様の強みとなるように分析から運用まで一貫してお手伝いします。<br />
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。
+            </p>
+          </div>
+          <div class="Mbtn v-btn">
+            <a href="./html/about.html" class="Mbtn-link">View More</a>
+          </div>
+        </div>
+      </section>
+      <!-- works -->
+      <section class="works bg">
+        <h2 class="sec-ttl ttl-center">WORKS</h2>
+        <p class="works-txt">
+          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+        </p>
+        <div class="works-slider works-inner">
+          <a href="./html/works.html"> 
+          <div class="works-inner-item works-slider-item">
+            <div class="works-inner-item-img works-img">
+              <img src="img/works1.png" alt="おしゃれ感あるサイト" />
+            </div>
+            <div class="works-inner-item-txt">
+              <p>おしゃれ感あるサイトへリニューアル</p>
+            </div>
+          </div>
+        </a>
+          <a href="./html/works.html"> 
+             <div class="works-inner-item works-slider-item">
+            <div class="works-inner-item-img works-img">
+            <img src="img/works2.png" alt="お問い合せ数アップのサイト" />
+            </div>
+            <div class="works-inner-item-txt">
+              <p>ブランディングと戦略的ペーシ設計でお問い合せ数アップ</p>
+            </div>
+          </div>
+        </a>
+        <a href="./html/works.html"> 
+          <div class="works-inner-item works-slider-item">
+            <div class="works-inner-item-img works-img">
+              <img src="img/works3.png" alt="明るく楽しいサイト" />
+            </div>
+            <div class="works-inner-item-txt">
+              <p>アニメーションを多用した明るく楽しいサイト</p>
+            </div>
+          </div>
+        </a>
+        <a href="./html/works.html"> 
+          <div class="works-inner-item works-slider-item">
+            <div class="works-inner-item-img works-img">
+              <img src="img/works1.png" alt="おしゃれ感あるサイト" />
+            </div>
+            <div class="works-inner-item-txt">
+              <p>おしゃれ感あるサイトへリニューアル</p>
+            </div>
+          </div>
+        </a>
+          <a href="./html/works.html"> 
+          <div class="works-inner-item works-slider-item">
+            <div class="works-inner-item-img works-img">
+              <img src="img/works2.png" alt="お問い合せ数アップのサイト" />
+            </div>
+            <div class="works-inner-item-txt">
+              <p>ブランディングと戦略的ペーシ設計でお問い合せ数アップ</p>
+            </div>
+          </div>
+        </a>
+          <a href="./html/works.html"> 
+          <div class="works-inner-item works-slider-item">
+            <div class="works-inner-item-img">
+              <img src="img/works3.png" alt="明るく楽しいサイト" />
+            </div>
+            <div class="works-inner-item-txt">
+              <p>アニメーションを多用した明るく楽しいサイト</p>
+            </div>
+          </div>
+        </a>
+        </div>
+ 
+        <div class="Mbtn">
+          <a href="./html/works.html" class="Mbtn-link">View More</a>
+        </div>
+      </section>
+      <!-- service -->
+      <section id="service" class="service wrapper max-wrapper">
+        <h2 class="sec-ttl ttl-center">SERVICE</h2>
+        <div class="service-inner">
+          <div class="service-inner-item">
+            <div class="service-inner-item-img">
+              <img src="img/service1.png" alt="ホームページ制作" />
+            </div>
+            <div class="service-inner-item-txt">
+              <h4 class="fontz3">ホームページ制作</h4>
+              <p>
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              </p>
+            </div>
+          </div>
+          <div class="service-inner-item">
+            <div class="service-inner-item-img">
+              <img src="img/service2.png" alt="クリエイティブ" />
+            </div>
+            <div class="service-inner-item-txt">
+              <h4 class="fontz3">クリエイティブ</h4>
+              <p>
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              </p>
+            </div>
+          </div>
+          <div class="service-inner-item">
+            <div class="service-inner-item-img">
+              <img src="img/service3.png" alt="ホームページ制作" />
+            </div>
+            <div class="service-inner-item-txt">
+              <h4 class="fontz3">広告運用</h4>
+              <p>
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="Mbtn">
+          <a href="./html/service.html" class="Mbtn-link">View More</a>
+        </div>
+      </section>
+      <!-- news -->
+      <section class="news bg wrapper fadeUpTrigger">
+        <div class="news-inner ">
+          <div class="news-inner-l">
+            <h2 class="sec-ttl">NEWS</h2>
+            <div class="Mbtn">
+              <a href="./html/news.html" class="Mbtn-link">View More</a>
+            </div>
+          </div>
+          <div class="news-inner-r">
+            <article class="news-item">
+              <a href="./html/news-details.html">
+                <div class="news-item-head">
+                  <p class="date">2022.08.08</p>
+                </div>
+                <div class="news-item-body">
+                  <h5 class="ttl">
+                    <span>夏季休業のお知らせ</span>
+                  </h5>
+                </div>
+              </a>
+            </article>
+            <article class="news-item">
+              <a href="./html/news-details.html">
+                <div class="news-item-head">
+                  <p class="date">2022.06.28</p>
+                </div>
+                <div class="news-item-body">
+                  <h5 class="ttl">
+                    <span>政府方針変更による当社業績への影響について</span>
+                  </h5>
+                </div>
+              </a>
+            </article>
+            <article class="news-item">
+              <a href="./html/news-details.html">
+                <div class="news-item-head">
+                  <p class="date">2022.05.22</p>
+                </div>
+                <div class="news-item-body">
+                  <h5 class="ttl">
+                    <span>コーポレートサイトリニューアルのお知らせ</span>
+                  </h5>
+                </div>
+              </a>
+            </article>
+            <article class="news-item">
+              <a href="./html/news-details.html">
+                <div class="news-item-head">
+                  <p class="date">2022.04.25</p>
+                </div>
+                <div class="news-item-body">
+                  <h5 class="ttl">
+                    <span>ゴールデンウイーク休業のお知らせ</span>
+                  </h5>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+        <div class="v-btn">
+          <a href="./html/news.html" class="v-btn-link">View More</a>
+        </div>
+      </section>
+      <!-- recruit&contact -->
+      <section class="RC wrapper">
+        <div class="RC-inner">
+          <div class="RC-inner-item">
+            <a href="./html/recruit.html">
+              <div class="RC-img">
+                <img src="img/recruit.png" alt="採用情報" />
+              </div>
+              <p class="RC-txt "><span>RECRUIT </span> </p>
+            </a>
+          </div>
+          <div class="RC-inner-item">
+            <a href="./html/contact.html">
+              <div class="RC-img">
+                <img src="img/contact.png" alt="お問い合わせ" />
+              </div>
+              <p class="RC-txt"><span> CONTACT </span></p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer class="footer wrapper">
+      <div class="footer-inner">
+        <h4 class="footer-inner-logo fontz3"><a href="index.html">SAIMAL</a></h4>
+        <div class="footer-inner-item">
+          <div class="footer-inner-item-l">
+            <div class="footer-access">
+              〒xxx-xxxx <br />
+              埼玉県大宮市xxxx-xxx
+            </div>
+            <div class="footer-info">
+              <p class="tel">TEL：xxx-xxxx-xxx</p>
+              <p class="fax">FAX：xxx-xxxx-xxx</p>
+            </div>
+          </div>
+          <div class="footer-nav">
+            <div class="footer-nav-l">
+              <div class="footer-nav-l-l">
+                <p class="footer-nav-item">
+                  <a href="html/about.html">ABOUT</a>
+                </p>
+                <p class="footer-nav-item">
+                  <a href="html/works.html">WORKS</a>
+                </p>
+                <p class="footer-nav-item">
+                  <a href="html/service.html">SERVICE</a>
+                </p>
+              </div>
+              <div class="footer-nav-l-r">
+                <p class="footer-nav-item">
+                  <a href="html/news.html">NEWS</a>
+                </p>
+                <p class="footer-nav-item">
+                  <a href="html/recruit.html">RECRUIT</a>
+                </p>
+                <p class="footer-nav-item">
+                  <a href="html/contact.html">CONTACT</a>
+                </p>
+              </div>
+            </div>
+            <div class="footer-nav-r">
+              <div class="footer-nav-r-l">
+                <p class="footer-nav-item">
+                  <a href="#home">料金案内</a>
+                </p>
+                <p class="footer-nav-item">
+                  <a href="#home">対応エリア</a>
+                </p>
+              </div>
+              <div class="footer-nav-r-r">
+                <p class="footer-nav-item footer-privacy">
+                  <a href="#home">プライバシーポリシー</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <small>Copyright © SAIMAL INC. All rights reserved.</small>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+    ></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
