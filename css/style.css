@@ -1362,6 +1362,14 @@ button {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
+@media screen and (max-width: 480px) {
+  .pager .pagenav-num {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+}
 .pager .pagenav-num.current {
   background: #ECECEC;
   color: #000;
@@ -1480,13 +1488,13 @@ button {
 /* fadeLeft */
 .fadeLeft {
   -webkit-animation: fadeLeftAnime 1.2s forwards;
-          animation: fadeLeftAnime 1.2s forwards; /* fadeLeftAnimeを1秒で一回実行 */
+          animation: fadeLeftAnime 1.2s forwards; /* fadeLeftAnimeを1.2秒で一回実行 */
 }
 
 /* fadeRight */
 .fadeRight {
   -webkit-animation: fadeRightAnime 1.2s forwards;
-          animation: fadeRightAnime 1.2s forwards; /* fadeRightAnimeを1秒で一回実行 */
+          animation: fadeRightAnime 1.2s forwards; /* fadeRightAnimeを1.2秒で一回実行 */
 }
 
 .fadeLeftTrigger,

@@ -86,6 +86,11 @@
       height: 60px;
       @include flex1;
       transition: 0.5s;
+      @include mq(sp) {
+        width: 40px;
+        height: 40px;
+        @include font-size(14);
+      }
       &.current {
         background: $page-gray;
         color: $Black;
