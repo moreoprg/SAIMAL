@@ -15,18 +15,17 @@
     @include mq(sp) {
       padding-top: 30px;
     }
-    &-logo{
+    &-logo {
       position: relative;
       &::after {
-        @include position-line(-15px, 0, 100%,1px, $white);
+        @include position-line(-15px, 0, 100%, 1px, $white);
       }
-      a{
+      a {
         color: $white;
-        &:hover{
+        &:hover {
           opacity: 0.6;
         }
       }
-    
     }
     &-item {
       @include flex2(space-between);
@@ -85,18 +84,18 @@
             width: 9rem;
           }
         }
-  a {
-    color: $white;
-    @include mq(pc) {
-      @include font-size(16);
-    }
-    @include mq(tab) {
-      @include font-size(12);
-    }
-  }
-  &:hover{
-    opacity: 0.6;
-  }
+        a {
+          color: $white;
+          @include mq(pc) {
+            @include font-size(16);
+          }
+          @include mq(tab) {
+            @include font-size(12);
+          }
+        }
+        &:hover {
+          opacity: 0.6;
+        }
       }
     }
   }

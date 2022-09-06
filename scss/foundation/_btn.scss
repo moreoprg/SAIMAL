@@ -1,40 +1,40 @@
 @use "../global" as *;
 
-.Mbtn,.v-btn,.e-btn{
+.Mbtn,
+.v-btn,
+.e-btn {
   width: 250px;
   display: block;
   margin: 0 auto;
   @include mq(sp) {
     width: 150px;
   }
-    &-link {
-      border: 1px solid $Black;
-      @include font-size(24);
-      margin: 0 auto;
-      cursor: pointer;
-      outline: none;
-      height: 70px;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      width: 100%;
-      font-weight: 600;
-      font-family: $font-family2;
-      transition: 0.8s;
-      @include mq(sp) {
-        height: 42px;
-        @include font-size(16);
-      }
-      &:hover {
-        color: $white;
-        background: $Black;
-      }
+  &-link {
+    border: 1px solid $Black;
+    @include font-size(24);
+    margin: 0 auto;
+    cursor: pointer;
+    outline: none;
+    height: 70px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    font-weight: 600;
+    font-family: $font-family2;
+    transition: 0.8s;
+    @include mq(sp) {
+      height: 42px;
+      @include font-size(16);
+    }
+    &:hover {
+      color: $white;
+      background: $Black;
     }
   }
-
-
+}
 
 .v-btn {
   display: none;
@@ -45,7 +45,6 @@
   @include mq(sp) {
     width: 150px;
   }
-
 }
 
 .e-btn {
@@ -68,7 +67,6 @@
     }
   }
 }
-
 
 // pager-btn
 .pager {
@@ -95,12 +93,12 @@
         background: $page-gray;
         color: $Black;
       }
-   &.n-current{
-    &:hover{
-      background: $page-gray;
-      color: $Black;
-    }
-   }
+      &.n-current {
+        &:hover {
+          background: $page-gray;
+          color: $Black;
+        }
+      }
     }
   }
   &-inner {
@@ -112,13 +110,12 @@
         height: 60px;
         background: $cBlack;
         color: $white;
-        transition: .5s;
+        transition: 0.5s;
         @include mq(sp) {
           width: 80px;
           height: 50px;
-        
         }
-        &:hover{
+        &:hover {
           background: $white;
           color: $cBlack;
         }
@@ -126,12 +123,8 @@
       &.pager-home {
         a {
           padding: 0 5%;
-        
         }
       }
     }
   }
 }
-
-
-
