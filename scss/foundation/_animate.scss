@@ -94,17 +94,26 @@
   color: $white;
   text-align: center;
   font-family: $font-family2;
-  @include font-vw(100, 1024);
+  @include font-size(100);
+  @include mq(pc) {
+    @include font-vw(100, 1024);
+  }
+ 
   letter-spacing: 0.1em;
 }
 #loading-container {
-  width: 30%;
+  width: 25%;
   height: 100px;
   margin: auto;
   display: block;
   color: $white;
   @include position(absolute, 60%, 50%);
-  @include font-vw(40, 1024);
+  @include font-size(40);
+  @include mq(pc) {
+    @include font-vw(40, 1024);
+    width: 30%;
+  }
+
   .L {
     @include position-load(50%, 5%, L, 2s);
   }

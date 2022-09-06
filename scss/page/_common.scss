@@ -27,7 +27,7 @@ width: 90%;
  
     }
     &-j{
-      color: $Black;
+      color: $bgray;
       @include font-vw(48, 1024);
     @include position-bottom(0);
     font-weight: bold;
@@ -47,11 +47,11 @@ width: 90%;
  
   font-family: $font-family1;
   @include mq(tab) {
-    @include font-size(32);
+    @include font-size(36);
 padding-top: 40px;
   }
   @include mq(sp) {
-    @include font-size(24);
+    @include font-size(30);
   padding-top: 40px;
   }
 }

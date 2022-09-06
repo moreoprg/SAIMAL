@@ -23,7 +23,7 @@ $(function () {
 // クラスの付与
 
 // homeトップのズーム拡大でスライド
-const slider = $(".slider");
+const slider = $(".home-slider");
 
 $(function () {
   // 最初のスライドに"slider-animation"のclassを付ける(data-slick-index="0"が最初のスライドを指す)

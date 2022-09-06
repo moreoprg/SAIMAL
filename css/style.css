@@ -443,15 +443,15 @@ button {
 }
 @media screen and (max-width: 768px) {
   .sec-ttl {
-    font-size: 32px;
-    font-size: 2rem;
+    font-size: 36px;
+    font-size: 2.25rem;
     margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 480px) {
   .sec-ttl {
-    font-size: 24px;
-    font-size: 1.5rem;
+    font-size: 30px;
+    font-size: 1.875rem;
     padding-top: 40px;
   }
 }
@@ -486,7 +486,6 @@ button {
 .home {
   padding-top: 80px;
   width: 100%;
-  height: auto;
 }
 @media screen and (max-width: 480px) {
   .home {
@@ -496,6 +495,12 @@ button {
 .home-top {
   position: relative;
   top: 0;
+  height: calc(100vh - 80px);
+}
+@media screen and (max-width: 480px) {
+  .home-top {
+    height: calc(100vh - 60px);
+  }
 }
 .home-ttl {
   position: absolute;
@@ -507,20 +512,23 @@ button {
   z-index: 5;
   width: 90%;
 }
-.home .slider {
-  width: 100%;
-  height: 100%;
+.home-slider {
   overflow: hidden; /* 画像がはみ出ないようにする */
+  height: 100%;
 }
-.home .slider-img {
-  width: 100%;
-  height: auto;
+.home-slider-img {
+  height: calc(100vh - 80px);
 }
-.home .slider-img img {
+@media screen and (max-width: 480px) {
+  .home-slider-img {
+    height: calc(100vh - 60px);
+  }
+}
+.home-slider-img img {
   object-fit: cover;
   background-repeat: no-repeat;
   vertical-align: top;
-  width: 100%;
+  background-size: cover;
   height: 100%;
 }
 
@@ -1399,12 +1407,18 @@ button {
   text-align: center;
   font-family: "Outfit", serif, sans-serif;
   font-size: 100px;
-  font-size: 9.765625vw;
+  font-size: 6.25rem;
   letter-spacing: 0.1em;
+}
+@media screen and (max-width: 1024px) {
+  #loading-text {
+    font-size: 100px;
+    font-size: 9.765625vw;
+  }
 }
 
 #loading-container {
-  width: 30%;
+  width: 25%;
   height: 100px;
   margin: auto;
   display: block;
@@ -1413,7 +1427,14 @@ button {
   top: 60%;
   left: 50%;
   font-size: 40px;
-  font-size: 3.90625vw;
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 1024px) {
+  #loading-container {
+    font-size: 40px;
+    font-size: 3.90625vw;
+    width: 30%;
+  }
 }
 #loading-container .L {
   position: absolute;
@@ -2318,7 +2339,7 @@ button {
   display: inline-block;
 }
 .page-home-j {
-  color: #000;
+  color: rgba(0, 0, 0, 0.7);
   font-size: 48px;
   font-size: 4.6875vw;
   position: absolute;
@@ -2340,15 +2361,15 @@ button {
 }
 @media screen and (max-width: 768px) {
   .page-sec-ttl {
-    font-size: 32px;
-    font-size: 2rem;
+    font-size: 36px;
+    font-size: 2.25rem;
     padding-top: 40px;
   }
 }
 @media screen and (max-width: 480px) {
   .page-sec-ttl {
-    font-size: 24px;
-    font-size: 1.5rem;
+    font-size: 30px;
+    font-size: 1.875rem;
     padding-top: 40px;
   }
 }

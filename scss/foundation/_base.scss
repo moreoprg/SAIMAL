@@ -96,11 +96,11 @@ button {
   margin-bottom: 60px;
   font-family: $font-family2;
   @include mq(tab) {
-    @include font-size(32);
+    @include font-size(36);
     margin-bottom: 30px;
   }
   @include mq(sp) {
-    @include font-size(24);
+    @include font-size(30);
     padding-top: 40px;
   }
 }
@@ -131,13 +131,16 @@ button {
 .home {
   padding-top: 80px;
   width: 100%;
-  height: auto;
   @include mq(sp) {
     padding-top: 60px;
   }
   &-top {
     position: relative;
     top: 0;
+    height: calc(100vh - 80px);
+    @include mq(sp) {
+      height: calc(100vh - 60px);
+    }
   }
   &-ttl {
     @include position-center;
@@ -146,16 +149,18 @@ button {
     z-index: 5;
     width: 90%;
   }
-  .slider {
-    width: 100%;
-    height: 100%;
+  &-slider {
     overflow: hidden; /* 画像がはみ出ないようにする */
+    height: 100%;
+
     &-img {
-      width: 100%;
-      height: auto;
+      height: calc(100vh - 80px);
+      @include mq(sp) {
+        height: calc(100vh - 60px);
+      }
       img {
         @include img;
-        width: 100%;
+        background-size: cover;
         height: 100%;
       }
     }
