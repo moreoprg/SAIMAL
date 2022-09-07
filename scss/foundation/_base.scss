@@ -9,9 +9,14 @@ body {
   color: $Black;
   font-family: $font-family1;
   @include font-size(18);
-
+  .pc-br {
+    display: none;
+  }
   @include mq(tab) {
     @include font-size(16);
+    .pc-br {
+      display: block;
+    }
     .tab-br {
       display: none;
     }
@@ -20,17 +25,6 @@ body {
     @include font-size(14);
   }
 }
-
-// @media screen and (max-width: 768px) {
-//   body {
-//     @include font-size(16);
-//   }
-// }
-// @media screen and (max-width: 480px) {
-//   body {
-//     @include font-size(14);
-//   }
-// }
 
 a {
   text-decoration: none;
@@ -71,7 +65,14 @@ button {
 
 .fontz1 {
   @include font-vw(48, 768);
+  @include mq(tab) {
+    @include font-vw(60, 768);
+  }
+  @include mq(sp) {
+    @include font-vw(48, 480);
+  }
 }
+
 .fontz2 {
   @include font-size(40);
   font-weight: bold;
