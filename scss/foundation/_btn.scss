@@ -88,17 +88,17 @@
         width: 40px;
         height: 40px;
         @include font-size(14);
+    
+      }
+      &:hover {
+        background: $page-gray;
+        color: $Black;
       }
       &.current {
         background: $page-gray;
         color: $Black;
       }
-      &.n-current {
-        &:hover {
-          background: $page-gray;
-          color: $Black;
-        }
-      }
+    
     }
   }
   &-inner {
@@ -128,3 +128,4 @@
     }
   }
 }
+

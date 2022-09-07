@@ -171,7 +171,11 @@ select {
   z-index: 10;
   width: 100%;
   height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   line-height: 80px;
   background: #fff;
@@ -205,7 +209,11 @@ select {
   width: 75%;
 }
 .header-nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
   line-height: 80px;
 }
@@ -238,6 +246,8 @@ select {
   width: 60%;
   height: 1px;
   background: #000;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 @media screen and (max-width: 768px) {
@@ -264,7 +274,8 @@ select {
     cursor: pointer;
     z-index: 500;
   }
-  header .drawer::before, header .drawer::after {
+  header .drawer::before,
+  header .drawer::after {
     content: "";
     display: block;
     width: 30px;
@@ -291,7 +302,7 @@ select {
     top: 0;
     left: 0;
     z-index: 400;
-    background: #ECECEC;
+    background: #ececec;
     color: #000;
     text-align: center;
   }
@@ -300,6 +311,8 @@ select {
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     line-height: 1.5;
   }
@@ -319,14 +332,14 @@ select {
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
-    color: #ECECEC;
+    color: #ececec;
   }
   body.nav-open header .drawer::after {
     top: 9px;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-    color: #ECECEC;
+    color: #ececec;
   }
 }
 @media screen and (max-width: 480px) {
@@ -341,7 +354,8 @@ body {
   letter-spacing: 1px;
   word-break: break-all;
   color: #000;
-  font-family: "Noto Sans JP", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, serif, sans-serif;
+  font-family: "Noto Sans JP", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic",
+    メイリオ, serif, sans-serif;
   font-size: 18px;
   font-size: 1.125rem;
 }
@@ -479,7 +493,7 @@ button {
 }
 
 .bg {
-  background: #F8F8F8;
+  background: #f8f8f8;
 }
 
 .border2 {
@@ -494,6 +508,8 @@ button {
   width: 50%;
   height: 2px;
   background: #000;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 .border2:hover {
@@ -524,6 +540,8 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
@@ -543,6 +561,7 @@ button {
   }
 }
 .home-slider-img img {
+  -o-object-fit: cover;
   object-fit: cover;
   background-repeat: no-repeat;
   vertical-align: top;
@@ -550,15 +569,29 @@ button {
   height: 100%;
 }
 
-@keyframes fadezoom {
+@-webkit-keyframes fadezoom {
   0% {
+    -webkit-transform: scale(1);
     transform: scale(1);
   }
   100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); /* 拡大率 */
+  }
+}
+
+@keyframes fadezoom {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
     transform: scale(1.1); /* 拡大率 */
   }
 }
 .slider-animation {
+  -webkit-animation: fadezoom 8s 0s forwards;
   animation: fadezoom 8s 0s forwards;
 }
 
@@ -578,7 +611,11 @@ button {
   }
 }
 .about-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin: 0 auto;
 }
@@ -657,6 +694,7 @@ button {
   }
 }
 .works-inner-item-img img {
+  -o-object-fit: cover;
   object-fit: cover;
   background-repeat: no-repeat;
   vertical-align: top;
@@ -669,6 +707,8 @@ button {
 .works-slider {
   width: 100%;
   max-width: 88%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
   margin-bottom: 60px;
@@ -689,7 +729,11 @@ button {
 }
 
 .works-img:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
   transform: scale(1.1);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
   opacity: 0.8;
 }
@@ -710,6 +754,8 @@ button {
   left: 0;
   width: 0.6rem;
   height: 0.6rem;
+  -webkit-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
   transform: rotate(-135deg);
   border-top: 2px solid #000;
   border-right: 2px solid #000;
@@ -732,6 +778,8 @@ button {
   right: 0;
   width: 0.6rem;
   height: 0.6rem;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   border-top: 2px solid #000;
   border-right: 2px solid #000;
@@ -749,8 +797,14 @@ button {
 }
 .service-inner {
   margin-bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 @media screen and (max-width: 768px) {
@@ -781,6 +835,7 @@ button {
   width: 100%;
 }
 .service-inner-item-img img {
+  -o-object-fit: cover;
   object-fit: cover;
   background-repeat: no-repeat;
   vertical-align: top;
@@ -818,7 +873,11 @@ button {
 .news-inner {
   padding-top: 80px;
   padding-bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 @media screen and (max-width: 768px) {
@@ -876,14 +935,22 @@ button {
 }
 
 .news-item {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 .news-item:hover {
   opacity: 0.6;
 }
 .news-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   position: relative;
   padding: 3% 0;
@@ -939,7 +1006,11 @@ button {
   }
 }
 .RC-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   width: 90%;
   margin: 0 auto;
@@ -965,6 +1036,7 @@ button {
   width: 100%;
 }
 .RC-img img {
+  -o-object-fit: cover;
   object-fit: cover;
   background-repeat: no-repeat;
   vertical-align: top;
@@ -973,6 +1045,8 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   color: #fff;
   font-size: 40px;
@@ -1007,6 +1081,8 @@ button {
   background: #fff;
   display: block;
   background: #fff;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 .RC-txt span:hover::after {
@@ -1053,7 +1129,11 @@ button {
   opacity: 0.6;
 }
 .footer-inner-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   width: 95%;
   margin: 0 auto;
@@ -1080,6 +1160,8 @@ button {
   .footer-inner-item-l {
     font-size: 12px;
     font-size: 0.75rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 }
@@ -1093,12 +1175,18 @@ button {
   }
 }
 .footer-inner .footer-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .footer-inner .footer-nav-l {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .footer-inner .footer-nav-r {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 @media screen and (max-width: 1024px) {
@@ -1181,8 +1269,8 @@ button {
 }
 @media screen and (max-width: 480px) {
   .Mbtn,
-.v-btn,
-.e-btn {
+  .v-btn,
+  .e-btn {
     width: 150px;
   }
 }
@@ -1197,19 +1285,27 @@ button {
   outline: none;
   height: 70px;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   position: relative;
   width: 100%;
   font-weight: 600;
   font-family: "Outfit", serif, sans-serif;
+  -webkit-transition: 0.8s;
+  -o-transition: 0.8s;
   transition: 0.8s;
 }
 @media screen and (max-width: 480px) {
   .Mbtn-link,
-.v-btn-link,
-.e-btn-link {
+  .v-btn-link,
+  .e-btn-link {
     height: 42px;
     font-size: 16px;
     font-size: 1rem;
@@ -1248,7 +1344,8 @@ button {
   }
 }
 .e-btn-link {
-  font-family: "Noto Sans JP", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, serif, sans-serif;
+  font-family: "Noto Sans JP", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic",
+    メイリオ, serif, sans-serif;
   background: #fff;
   font-size: 20px;
   font-size: 1.25rem;
@@ -1276,8 +1373,14 @@ button {
   }
 }
 .pager .pagenav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .pager .pagenav-num {
@@ -1285,9 +1388,17 @@ button {
   color: #fff;
   width: 60px;
   height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 @media screen and (max-width: 480px) {
@@ -1298,27 +1409,41 @@ button {
     font-size: 0.875rem;
   }
 }
-.pager .pagenav-num.current {
-  background: #ECECEC;
+.pager .pagenav-num:hover {
+  background: #ececec;
   color: #000;
 }
-.pager .pagenav-num.n-current:hover {
-  background: #ECECEC;
+.pager .pagenav-num.current {
+  background: #ececec;
   color: #000;
 }
 .pager-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .pager-inner-item a {
   width: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   height: 60px;
   background: #333333;
   color: #fff;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 @media screen and (max-width: 480px) {
@@ -1337,10 +1462,22 @@ button {
 
 /* その場でフワッと */
 .fadeIn {
+  -webkit-animation-name: fadeInAnime;
   animation-name: fadeInAnime;
+  -webkit-animation-duration: 2.5s;
   animation-duration: 2.5s;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   opacity: 0;
+}
+
+@-webkit-keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInAnime {
@@ -1353,29 +1490,49 @@ button {
 }
 /* 下から */
 .fadeUp {
+  -webkit-animation-name: fadeUpAnime;
   animation-name: fadeUpAnime;
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   opacity: 0;
+}
+
+@-webkit-keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeUpAnime {
   from {
     opacity: 0;
+    -webkit-transform: translateY(100px);
     transform: translateY(100px);
   }
   to {
     opacity: 1;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
 /* fadeLeft */
 .fadeLeft {
+  -webkit-animation: fadeLeftAnime 1.2s forwards;
   animation: fadeLeftAnime 1.2s forwards; /* fadeLeftAnimeを1.2秒で一回実行 */
 }
 
 /* fadeRight */
 .fadeRight {
+  -webkit-animation: fadeRightAnime 1.2s forwards;
   animation: fadeRightAnime 1.2s forwards; /* fadeRightAnimeを1.2秒で一回実行 */
 }
 
@@ -1384,23 +1541,52 @@ button {
   opacity: 0; /* 初めは見えないようにしておく */
 }
 
-@keyframes fadeLeftAnime {
+@-webkit-keyframes fadeLeftAnime {
   from {
     opacity: 0; /* 初めは見えないようにしておく */
+    -webkit-transform: translateX(100px);
     transform: translateX(100px); /* 100px右に動かしておく */
   }
   to {
     opacity: 1; /* 可視化する */
+    -webkit-transform: translateX(0);
+    transform: translateX(0); /* 元の位置に戻す */
+  }
+}
+
+@keyframes fadeLeftAnime {
+  from {
+    opacity: 0; /* 初めは見えないようにしておく */
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px); /* 100px右に動かしておく */
+  }
+  to {
+    opacity: 1; /* 可視化する */
+    -webkit-transform: translateX(0);
+    transform: translateX(0); /* 元の位置に戻す */
+  }
+}
+@-webkit-keyframes fadeRightAnime {
+  from {
+    opacity: 0; /* 初めは見えないようにしておく */
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px); /* 100px左に動かしておく */
+  }
+  to {
+    opacity: 1; /* 可視化する */
+    -webkit-transform: translateX(0);
     transform: translateX(0); /* 元の位置に戻す */
   }
 }
 @keyframes fadeRightAnime {
   from {
     opacity: 0; /* 初めは見えないようにしておく */
+    -webkit-transform: translateX(-100px);
     transform: translateX(-100px); /* 100px左に動かしておく */
   }
   to {
     opacity: 1; /* 可視化する */
+    -webkit-transform: translateX(0);
     transform: translateX(0); /* 元の位置に戻す */
   }
 }
@@ -1420,6 +1606,8 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   color: #fff;
   text-align: center;
@@ -1458,52 +1646,94 @@ button {
   position: absolute;
   bottom: 50%;
   left: 5%;
+  -webkit-animation: L 2s infinite;
   animation: L 2s infinite;
 }
 #loading-container .O {
   position: absolute;
   bottom: 50%;
   left: 18%;
+  -webkit-animation: O 2s infinite;
   animation: O 2s infinite;
+  -webkit-animation-delay: 100ms;
   animation-delay: 100ms;
 }
 #loading-container .A {
   position: absolute;
   bottom: 50%;
   left: 35%;
+  -webkit-animation: A 2s infinite;
   animation: A 2s infinite;
+  -webkit-animation-delay: 200ms;
   animation-delay: 200ms;
 }
 #loading-container .D {
   position: absolute;
   bottom: 50%;
   left: 50%;
+  -webkit-animation: D 2s infinite;
   animation: D 2s infinite;
+  -webkit-animation-delay: 300ms;
   animation-delay: 300ms;
 }
 #loading-container .I {
   position: absolute;
   bottom: 50%;
   left: 65%;
+  -webkit-animation: I 2s infinite;
   animation: I 2s infinite;
+  -webkit-animation-delay: 400ms;
   animation-delay: 400ms;
 }
 #loading-container .N {
   position: absolute;
   bottom: 50%;
   left: 75%;
+  -webkit-animation: N 2s infinite;
   animation: N 2s infinite;
+  -webkit-animation-delay: 500ms;
   animation-delay: 500ms;
 }
 #loading-container .G {
   position: absolute;
   bottom: 50%;
   left: 90%;
+  -webkit-animation: G 2s infinite;
   animation: G 2s infinite;
+  -webkit-animation-delay: 600ms;
   animation-delay: 600ms;
 }
 
+@-webkit-keyframes L {
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+  50% {
+    top: 50px;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    opacity: 0;
+  }
+}
+
 @keyframes L {
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+  50% {
+    top: 50px;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes O {
   0% {
     top: 0px;
     opacity: 0;
@@ -1531,7 +1761,35 @@ button {
     opacity: 0;
   }
 }
+@-webkit-keyframes A {
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+  50% {
+    top: 50px;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    opacity: 0;
+  }
+}
 @keyframes A {
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+  50% {
+    top: 50px;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes D {
   0% {
     top: 0px;
     opacity: 0;
@@ -1559,6 +1817,20 @@ button {
     opacity: 0;
   }
 }
+@-webkit-keyframes I {
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+  50% {
+    top: 50px;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    opacity: 0;
+  }
+}
 @keyframes I {
   0% {
     top: 0px;
@@ -1573,7 +1845,35 @@ button {
     opacity: 0;
   }
 }
+@-webkit-keyframes N {
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+  50% {
+    top: 50px;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    opacity: 0;
+  }
+}
 @keyframes N {
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+  50% {
+    top: 50px;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes G {
   0% {
     top: 0px;
     opacity: 0;
@@ -1657,7 +1957,11 @@ button {
   }
 }
 .about-outline-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0 5%;
 }
@@ -1753,8 +2057,11 @@ button {
 }
 .works-contents .works-grid {
   margin-bottom: 60px;
+  display: -ms-grid;
   display: grid;
   gap: 0.5rem;
+  -ms-grid-columns: minmax(240px, 1fr) 0.5rem minmax(240px, 1fr) 0.5rem
+    minmax(240px, 1fr);
   grid-template-columns: repeat(3, minmax(240px, 1fr));
 }
 @media screen and (max-width: 1024px) {
@@ -1795,8 +2102,13 @@ button {
   margin-top: 20px;
 }
 .service-container-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-top: 60px;
 }
@@ -1825,7 +2137,11 @@ button {
   }
 }
 .service-container-list-item-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .service-container-list-item-ico {
@@ -1840,6 +2156,7 @@ button {
   }
 }
 .service-container-list-item-ico img {
+  -o-object-fit: cover;
   object-fit: cover;
   background-repeat: no-repeat;
   vertical-align: top;
@@ -1886,12 +2203,14 @@ button {
   }
 }
 .service-pic img {
+  -o-object-fit: cover;
   object-fit: cover;
   background-repeat: no-repeat;
   vertical-align: top;
   height: 100%;
 }
 .service-pic.website-img img {
+  -o-object-position: 0% 100%;
   object-position: 0% 100%;
 }
 .service-pic.creative-img {
@@ -1908,7 +2227,7 @@ button {
   padding-bottom: 30px;
 }
 .sec-service:nth-child(even) {
-  background: #F8F8F8;
+  background: #f8f8f8;
 }
 
 /*news.scss*/
@@ -1922,10 +2241,14 @@ button {
   }
 }
 .news-content-head-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 1%;
 }
 .news-content-head-categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .news-content-head-categories li {
@@ -1945,6 +2268,8 @@ button {
   opacity: 0.6;
 }
 .news-content-head-year {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .news-content-head-year-l {
@@ -2045,8 +2370,14 @@ button {
   margin-bottom: 80px;
 }
 .recruit-categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin-top: 5%;
 }
@@ -2056,9 +2387,15 @@ button {
   }
 }
 .recruit-categories-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 @media screen and (max-width: 768px) {
@@ -2113,7 +2450,8 @@ button {
 .recruit .job-inner-list-item-ttl:hover {
   opacity: 0.6;
 }
-.recruit .job-inner-list-item-ttl::before, .recruit .job-inner-list-item-ttl::after {
+.recruit .job-inner-list-item-ttl::before,
+.recruit .job-inner-list-item-ttl::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -2123,19 +2461,25 @@ button {
   background-color: #333333;
 }
 .recruit .job-inner-list-item-ttl::before {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
   transform: rotate(0deg);
 }
 .recruit .job-inner-list-item-ttl::after {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 .recruit .job-inner-list-item-ttl.close::before {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
   transform: rotate(0deg);
 }
 .recruit .job-inner-list-item-ttl.close::after {
   display: none;
 }
 .recruit .job-inner-list-item-content {
-  background: #F8F8F8;
+  background: #f8f8f8;
   padding: 3% 10% 5%;
   margin-top: 3%;
   margin-bottom: 3%;
@@ -2216,12 +2560,15 @@ button {
   margin-bottom: 20px;
 }
 .contact-form-item-name small {
-  color: #FB1010;
+  color: #fb1010;
 }
-.contact-form-txt, .contact-form-textarea {
+.contact-form-txt,
+.contact-form-textarea {
   width: 100%;
   margin-bottom: 5px;
   border: 1px solid #000;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   padding: 20px;
 }
@@ -2251,6 +2598,9 @@ button {
 .form-agreement .checkbox {
   position: relative;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none; /* テキストの選択を防ぐ */
 }
 .form-agreement .checkbox input {
@@ -2289,8 +2639,12 @@ button {
   height: 12px; /* チェックの大きさ */
   border: solid #000;
   border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   opacity: 0; /* 透明にしておく */
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 @media screen and (max-width: 768px) {
@@ -2327,7 +2681,7 @@ button {
 
 /*page-htmlファイル共通*/
 .page {
-  background: #ECECEC;
+  background: #ececec;
   padding-bottom: 60px;
   width: 100%;
 }
@@ -2363,9 +2717,12 @@ button {
   position: absolute;
   bottom: 0;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   font-weight: bold;
-  font-family: "Noto Sans JP", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, serif, sans-serif;
+  font-family: "Noto Sans JP", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic",
+    メイリオ, serif, sans-serif;
 }
 .page-home-txt {
   padding-top: 5%;
@@ -2375,7 +2732,8 @@ button {
   font-size: 48px;
   font-size: 3rem;
   padding-top: 60px;
-  font-family: "Noto Sans JP", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic", メイリオ, serif, sans-serif;
+  font-family: "Noto Sans JP", 游ゴシック体, YuGothic, 游ゴシック, "Yu Gothic",
+    メイリオ, serif, sans-serif;
 }
 @media screen and (max-width: 768px) {
   .page-sec-ttl {
@@ -2393,5 +2751,5 @@ button {
 }
 
 .bg-gray {
-  background: #ECECEC;
+  background: #ececec;
 }

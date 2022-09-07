@@ -93,16 +93,16 @@
               <a href="./works.html">WORKS</a>
             </li>
             <li class="header-nav-list-item">
-              <a href="./service.html">SERVICE</a>
+              <a href="./service.html ">SERVICE</a>
             </li>
             <li class="header-nav-list-item">
-              <a href="./news.html">NEWS</a>
+              <a href="#" class="border">NEWS</a>
             </li>
             <li class="header-nav-list-item">
               <a href="./recruit.html">RECRUIT</a>
             </li>
             <li class="header-nav-list-item">
-              <a href="#" class="border">CONTACT</a>
+              <a href="./contact.html">CONTACT</a>
             </li>
           </ul>
         </nav>
@@ -111,119 +111,129 @@
       </header>
       <div class="page-home">
         <div class="page-home-big">
-          CONTACT
-          <p class="page-home-j">お問い合わせ</p>
+          NEWS
+          <p class="page-home-j">ニュース</p>
         </div>
-        <p class="page-home-txt">
-          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。
-        </p>
       </div>
     </div>
-    <main class="bg-gray">
-      <div class="contact">
-        <div class="contact-inner">
-          <form method="post" class="contact-form">
-            <div class="contact-form-item">
-              <label for="name" class="contact-form-item-name"
-                >お名前<small>※</small>
-              </label>
-              <div class="contact-form-item-box">
-                <input
-                  type="text"
-                  class="contact-form-txt"
-                  name="名前"
-                  id="name"
-                  placeholder="例）山田太郎"
-                />
-              </div>
-            </div>
-            <div class="contact-form-item">
-              <label for="company" class="contact-form-item-name"
-                >会社名<small>※</small>
-              </label>
-              <div class="contact-form-item-box">
-                <input
-                  type="text"
-                  class="contact-form-txt"
-                  name="会社"
-                  id="company"
-                  placeholder="例）株式会社SAIMAL"
-                />
-              </div>
-            </div>
-            <div class="contact-form-item">
-              <label for="email" class="contact-form-item-name"
-                >メールアドレス<small>※</small>
-              </label>
-              <div class="contact-form-item-box">
-                <input
-                  type="email"
-                  class="contact-form-txt"
-                  name="メール"
-                  id="email"
-                  placeholder="例）abd@sample.com"
-                />
-              </div>
-            </div>
 
-            <div class="contact-form-item">
-              <label for="tel" class="contact-form-item-name">電話番号</label>
-              <div class="contact-form-item-box">
-                <input
-                  type="tel"
-                  class="contact-form-txt"
-                  name="電話"
-                  id="tel"
-                  placeholder="例）0123-456-789"
-                />
+    <!-- news contents -->
+    <section class="sec-news">
+      <div class="news-content">
+        <div class="news-content-head">
+          <h2 class="page-sec-ttl font-outfit">ALL</h2>
+          <div class="news-content-head-select">
+            <ul class="news-content-head-categories">
+              <li><a href="#">すべて</a></li>
+              <li><a href="#">ニュース</a></li>
+            </ul>
+            <div class="news-content-head-year">
+              <p class="news-content-head-year-l">year：</p>
+              <select name="year" onChange="location.href=value;">
+                <option value="#">all</option>
+                <option value="#">2022</option>
+                <option value="#">2021</option>
+                <option value="#">2020</option>
+                <option value="#">2019</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="news-content-item">
+          <article class="news-item">
+            <a href="./news-details.html">
+              <div class="news-item-head">
+                <p class="date">2022.08.08</p>
               </div>
-            </div>
-
-            <div class="contact-form-item contact-form-message">
-              <label for="message" class="contact-form-item-name"
-                >ご相談内容<small>※</small>
-              </label>
-              <div class="contact-form-item-box contact-form-message-box">
-                <textarea
-                  name="メッセージ"
-                  id="message"
-                  class="contact-form-textarea"
-                  cols="50"
-                  rows="10"
-                  placeholder="例）テキストが入ります"
-                ></textarea>
+              <div class="news-item-body">
+                <h5 class="ttl">
+                  <span>夏季休業のお知らせ</span>
+                </h5>
               </div>
-            </div>
-            <div class="form-agreement">
-              <span class="form-agreement-checkbox">
-                <label class="checkbox"
-                  ><input
-                    type="checkbox"
-                    name="agree"
-                    value="プライバシーポリシーに同意する"
-                    required
-                  />
-                  <span class="checkbox-mark"></span>
-                  <span class="form-agreement-checkbox-txt"
-                    >プライバシーポリシーに同意する</span
-                  >
-                </label>
-              </span>
-              <p class="privacy">
-                <a href="#" target="”_blank”" rel="noreferrer noopener"
-                  >プライバシーポリシー</a
-                >はこちら
-              </p>
-            </div>
-            <div class="e-btn">
-              <button class="e-btn-link" type="submit" value="send">
-                送信する
-              </button>
-            </div>
-          </form>
+            </a>
+          </article>
+          <article class="news-item">
+            <a href="./news-details.html">
+              <div class="news-item-head">
+                <p class="date">2022.06.28</p>
+              </div>
+              <div class="news-item-body">
+                <h5 class="ttl">
+                  <span>政府方針変更による当社業績への影響について</span>
+                </h5>
+              </div>
+            </a>
+          </article>
+          <article class="news-item">
+            <a href="./news-details.html">
+              <div class="news-item-head">
+                <p class="date">2022.05.22</p>
+              </div>
+              <div class="news-item-body">
+                <h5 class="ttl">
+                  <span>コーポレートサイトリニューアルのお知らせ</span>
+                </h5>
+              </div>
+            </a>
+          </article>
+          <article class="news-item">
+            <a href="./news-details.html">
+              <div class="news-item-head">
+                <p class="date">2022.04.25</p>
+              </div>
+              <div class="news-item-body">
+                <h5 class="ttl">
+                  <span>ゴールデンウイーク休業のお知らせ</span>
+                </h5>
+              </div>
+            </a>
+          </article>
+          <article class="news-item">
+            <a href="./news-details.html">
+              <div class="news-item-head">
+                <p class="date">2022.03.21</p>
+              </div>
+              <div class="news-item-body">
+                <h5 class="ttl">
+                  <span>「健康経営優良法人2022」認定のお知らせ</span>
+                </h5>
+              </div>
+            </a>
+          </article>
+          <article class="news-item">
+            <a href="./news-details.html">
+              <div class="news-item-head">
+                <p class="date">2022.02.21</p>
+              </div>
+              <div class="news-item-body">
+                <h5 class="ttl">
+                  <span>お知らせ２</span>
+                </h5>
+              </div>
+            </a>
+          </article>
+          <article class="news-item">
+            <a href="./news-details.html">
+              <div class="news-item-head">
+                <p class="date">2022.01.21</p>
+              </div>
+              <div class="news-item-body">
+                <h5 class="ttl">
+                  <span>お知らせ1</span>
+                </h5>
+              </div>
+            </a>
+          </article>
+        </div>
+        <div class="pager">
+          <div class="pagenav" role="navigation">
+            <a href="./news.html" class="pagenav-num ">1</a>
+            <a href="./news2.html" class="pagenav-num">2</a>
+            <a href="#" class="pagenav-num current">3</a>
+          </div>
         </div>
       </div>
-    </main>
+    </section>
     <!-- footer -->
     <footer class="footer wrapper">
       <div class="footer-inner">
@@ -256,13 +266,13 @@
               </div>
               <div class="footer-nav-l-r">
                 <p class="footer-nav-item">
-                  <a href="./news.html">NEWS</a>
+                  <a href="#">NEWS</a>
                 </p>
                 <p class="footer-nav-item">
                   <a href="./recruit.html">RECRUIT</a>
                 </p>
                 <p class="footer-nav-item">
-                  <a href="#">CONTACT</a>
+                  <a href="./contact.html">CONTACT</a>
                 </p>
               </div>
             </div>
