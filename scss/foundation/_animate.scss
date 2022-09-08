@@ -4,7 +4,7 @@
 /* その場でフワッと */
 .fadeIn {
   animation-name: fadeInAnime;
-  animation-duration: 2.5s;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
@@ -23,7 +23,7 @@
 
 .fadeUp {
   animation-name: fadeUpAnime;
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
@@ -49,9 +49,14 @@
 .fadeRight {
   animation: fadeRightAnime 1.2s forwards; /* fadeRightAnimeを1.2秒で一回実行 */
 }
+/* fadeRight2 */
+.fadeRight2 {
+  animation: fadeRightAnime 2s forwards; /* fadeRightAnimeを3秒で一回実行 */
+}
 
 .fadeLeftTrigger,
-.fadeRightTrigger {
+.fadeRightTrigger,
+.fadeRightTrigger2 {
   opacity: 0; /* 初めは見えないようにしておく */
 }
 
@@ -99,7 +104,6 @@
     @include font-vw(85, 1024);
   }
 
- 
   letter-spacing: 0.1em;
 }
 #loading-container {

@@ -111,7 +111,7 @@ Job.on("click", function () {
 
 // フェードイン
 
-function fadeIn() {
+function fadeAnime() {
   // 画面に入ってきたら出てくる
   $(".fadeInTrigger").each(function () {
     //fadeInTriggerというクラス名が
@@ -155,16 +155,29 @@ function fadeIn() {
   });
 }
 $(window).scroll(function () {
-  fadeIn(); /* スクロールしたらfadeIn関数を呼ぶ*/
+  fadeAnime(); /* スクロールしたらfadeIn関数を呼ぶ*/
 });
 
+// ローディングアニメーション
 const loadAnime = $("#loading-wrapper");
 $(window).on("load", function () {
   loadAnime.delay(1300).fadeOut(700);
 });
-
 function stopload() {
   loadAnime.delay(1000).fadeOut(700);
 }
 setTimeout("stopload()", 10000);
 
+// ローディングアニメーション後実行
+$(function () {
+  $(".fadeInTrigger2").css("display", "none");
+  $(".fadeRightTrigger2").css("display", "none");
+});
+$(function () {
+  $(".fadeRightTrigger2").addClass("fadeRight2");
+  $(".fadeInTrigger2").addClass("fadeIn");
+  setTimeout(function () {
+    $(".fadeRightTrigger2").css("display", "block");
+    $(".fadeInTrigger2").css("display", "block");
+  }, 1500);
+});
